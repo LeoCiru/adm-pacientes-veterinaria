@@ -1,12 +1,14 @@
-import Header from "./componentes/Header"
+import Header from "./componentes/Header";
+import FormularioPacientes from "./componentes/FormularioPacientes";
 
 
 function App() {
 
   return (
-    <div className="App">
+    <>
       <Header/>
-    </div>
+      <FormularioPacientes/>
+    </>
   )
 }
 
