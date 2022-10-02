@@ -1,6 +1,6 @@
 import Formulario from "./Formulario"
 
-function FormularioPacientes() {
+function FormularioPacientes({pacientes, setPacientes}) {
   return (
     <section className="formulario-pacientes">
         <h2>Seguimiento Pacientes</h2>
@@ -8,7 +8,10 @@ function FormularioPacientes() {
             <span>Adminístralos</span>
         </p>
 
-        <Formulario/>
+        <Formulario
+          pacientes={pacientes}
+          setPacientes={setPacientes}
+        />
     </section>
   )
 }

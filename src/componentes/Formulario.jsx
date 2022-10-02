@@ -1,14 +1,14 @@
 import { useState } from "react"
 import Advertencia from "./Advertencia"
 
-function Formulario() {
-    const [nombre, setNombre] = useState('')
-    const [propietario, setPropietario] = useState('')
-    const [email, setEmail] = useState('')
-    const [alta, setAlta] = useState('')
-    const [sintomas, setSintomas] = useState('')
+function Formulario({pacientes, setPacientes}) {
+    const [nombre, setNombre] = useState('');
+    const [propietario, setPropietario] = useState('');
+    const [email, setEmail] = useState('');
+    const [alta, setAlta] = useState('');
+    const [sintomas, setSintomas] = useState('');
 
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -16,12 +16,28 @@ function Formulario() {
             setError(true);
         } else {
             setError(false);
+            const objetoPaciente = {
+                nombre,
+                propietario,
+                email,
+                alta,
+                sintomas
+            }
+    
+            setPacientes([...pacientes, objetoPaciente]);
         }
+
     }
+
   return (
     <>
-        <form>
+        <form
+            onSubmit={handleSubmit}
+        >
+        
+
         {error && <Advertencia/>}
+
             <label htmlFor="nombre">NOMBRE MASCOTA</label>
             <input 
                 type="text"
@@ -71,7 +87,6 @@ function Formulario() {
             <input
                 type="submit"
                 value="AGREGAR PACIENTE"
-                onClick={handleSubmit}
             />
         </form>
     </>

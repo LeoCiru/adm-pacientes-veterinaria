@@ -1,9 +1,11 @@
+import { useState } from "react";
 import Header from "./componentes/Header";
 import FormularioPacientes from "./componentes/FormularioPacientes";
 import ListadoPacientes from "./componentes/ListadoPacientes";
 
 
 function App() {
+  const [pacientes, setPacientes] = useState([]);
 
   return (
     <>
@@ -12,7 +14,10 @@ function App() {
       </header>
   
       <main>
-        <FormularioPacientes/>
+        <FormularioPacientes
+          pacientes={pacientes}
+          setPacientes={setPacientes}
+        />
         <ListadoPacientes/>
       </main>
     </>
