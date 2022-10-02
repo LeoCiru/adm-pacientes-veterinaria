@@ -4,27 +4,46 @@ function Formulario() {
   return (
     <>
         <form>
-            <label htmlFor="nombre">NOMBRE MASCOTA
-                <input type="text" id="nombre" placeholder='Nombre de la Mascota' />
-            </label>
+            <label htmlFor="nombre">NOMBRE MASCOTA</label>
+            <input 
+                type="text"
+                id="nombre"
+                placeholder='Nombre de la Mascota'
+                autoComplete='off'
+            />
 
-            <label htmlFor="propietario">NOMBRE PROPIETARIO
-                <input type="text" id="propietario" placeholder='Nombre del Propietario' />
-            </label>
+            <label htmlFor="propietario">NOMBRE PROPIETARIO</label>
+            <input
+                type="text"
+                id="propietario"
+                placeholder='Nombre del Propietario'
+                autoComplete='off'
+            />
 
-            <label htmlFor="email">EMAIL
-                <input type="email" id="email" placeholder='Email Contacto Propietario' />
-            </label>
+            <label htmlFor="email">EMAIL</label>
+            <input
+                type="email"
+                id="email"
+                placeholder='Email Contacto Propietario'
+                autoComplete='off'
+            />
 
-            <label htmlFor="alta">ALTA
-                <input type="date" id="alta"/>
-            </label>
+            <label htmlFor="alta">ALTA</label>
+            <input
+                type="date"
+                id="alta"
+                autoComplete='off'
+            />
 
-            <label htmlFor="sintomas">SÍNTOMAS
-                <textarea id="sintomas"></textarea>
-            </label>
-
-            <input type="submit" value="AGREGAR PACIENTE"/>
+            <label htmlFor="sintomas">SÍNTOMAS</label>
+            <textarea
+                id="sintomas"
+                placeholder='Describe los Síntomas'
+            />
+            <input
+                type="submit"
+                value="AGREGAR PACIENTE"
+            />
         </form>
     </>
   )
