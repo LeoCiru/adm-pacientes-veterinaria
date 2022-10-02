@@ -16,6 +16,7 @@ function Formulario({pacientes, setPacientes}) {
             setError(true);
         } else {
             setError(false);
+
             const objetoPaciente = {
                 nombre,
                 propietario,
@@ -25,6 +26,12 @@ function Formulario({pacientes, setPacientes}) {
             }
     
             setPacientes([...pacientes, objetoPaciente]);
+
+            setNombre('')
+            setPropietario('')
+            setEmail('')
+            setAlta('')
+            setSintomas('')
         }
 
     }
