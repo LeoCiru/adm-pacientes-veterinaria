@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import Advertencia from "./Advertencia"
 
 function Formulario() {
     const [nombre, setNombre] = useState('')
@@ -8,15 +8,20 @@ function Formulario() {
     const [alta, setAlta] = useState('')
     const [sintomas, setSintomas] = useState('')
 
+    const [error, setError] = useState(false)
+
     function handleSubmit(e) {
         e.preventDefault();
         if ([nombre, propietario, email, alta, sintomas].includes('')) {
-            console.log("COMPLETE CABALLERO")
+            setError(true);
+        } else {
+            setError(false);
         }
     }
   return (
     <>
         <form>
+        {error && <Advertencia/>}
             <label htmlFor="nombre">NOMBRE MASCOTA</label>
             <input 
                 type="text"
