@@ -1,6 +1,19 @@
-import React from 'react'
+import { useState } from "react"
+
 
 function Formulario() {
+    const [nombre, setNombre] = useState('')
+    const [propietario, setPropietario] = useState('')
+    const [email, setEmail] = useState('')
+    const [alta, setAlta] = useState('')
+    const [sintomas, setSintomas] = useState('')
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        if ([nombre, propietario, email, alta, sintomas].includes('')) {
+            console.log("COMPLETE CABALLERO")
+        }
+    }
   return (
     <>
         <form>
@@ -10,6 +23,8 @@ function Formulario() {
                 id="nombre"
                 placeholder='Nombre de la Mascota'
                 autoComplete='off'
+                value={nombre}
+                onChange={e => setNombre(e.target.value)}
             />
 
             <label htmlFor="propietario">NOMBRE PROPIETARIO</label>
@@ -18,6 +33,8 @@ function Formulario() {
                 id="propietario"
                 placeholder='Nombre del Propietario'
                 autoComplete='off'
+                value={propietario}
+                onChange={e => setPropietario(e.target.value)}
             />
 
             <label htmlFor="email">EMAIL</label>
@@ -26,6 +43,8 @@ function Formulario() {
                 id="email"
                 placeholder='Email Contacto Propietario'
                 autoComplete='off'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
             />
 
             <label htmlFor="alta">ALTA</label>
@@ -33,16 +52,21 @@ function Formulario() {
                 type="date"
                 id="alta"
                 autoComplete='off'
+                value={alta}
+                onChange={e => setAlta(e.target.value)}
             />
 
             <label htmlFor="sintomas">SÍNTOMAS</label>
             <textarea
                 id="sintomas"
                 placeholder='Describe los Síntomas'
+                value={sintomas}
+                onChange={e => setSintomas(e.target.value)}
             />
             <input
                 type="submit"
                 value="AGREGAR PACIENTE"
+                onClick={handleSubmit}
             />
         </form>
     </>
