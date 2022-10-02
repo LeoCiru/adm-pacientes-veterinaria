@@ -30,7 +30,7 @@ body
 
 body .titulo 
 {
-  margin: 50px 0 25px 0;
+  margin: 50px auto 25px auto;
   font-weight: 800;
   text-align: center;
 }
@@ -58,7 +58,7 @@ main .formulario-pacientes h2
 {
   text-align: center;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin: 0px auto 10px auto;
 }
 
 main .formulario-pacientes p
@@ -196,3 +196,21 @@ main .listado-pacientes .card-paciente .botones :is(.editar, .eliminar)
 
 main .listado-pacientes .card-paciente .botones .editar { background-color: var(--morado-principal); }
 main .listado-pacientes .card-paciente .botones .eliminar { background-color: var(--rojo); }
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  main .formulario-pacientes { width: 100%; }
+
+  main .listado-pacientes
+  {
+    width: 100%;
+    margin: 50px auto 0 auto;
+  }
+
+  main .listado-pacientes .card-paciente { margin: auto; }
+}
