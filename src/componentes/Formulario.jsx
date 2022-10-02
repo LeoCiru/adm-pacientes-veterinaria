@@ -23,6 +23,8 @@ function Formulario() {
             <label htmlFor="sintomas">SÍNTOMAS
                 <textarea id="sintomas"></textarea>
             </label>
+
+            <input type="submit" value="AGREGAR PACIENTE"/>
         </form>
     </>
   )
