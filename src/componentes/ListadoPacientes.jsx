@@ -1,3 +1,5 @@
+import Paciente from "./Paciente"
+
 function ListadoPacientes() {
   return (
     <section className="listado-pacientes">
@@ -6,7 +8,7 @@ function ListadoPacientes() {
             <span>aparecerán en este lugar</span>
         </p>
 
-        
+        <Paciente/>
     </section>
   )
 }

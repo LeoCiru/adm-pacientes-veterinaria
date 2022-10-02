@@ -13,6 +13,7 @@
   --gris-fondo: #F0F1F4;
   --gris-sombra: #c4c4c4;
   --morado-principal:#483CDF;
+  --rojo: #D72223;
 }
 
 html
@@ -41,16 +42,16 @@ body .titulo span { color: var(--morado-principal); }
 main
 {
   display: flex;
-  column-gap: 20px;
+  /* column-gap: 0px; */
   margin-bottom: 50px;
-  margin: auto;
+  margin: 0 auto 50px auto;
 }
 
 /* ---------- FORMULARIO PACIENTES ---------- */
 
 main .formulario-pacientes
 {
-  width: 50%;
+  width: 40%;
 }
 
 main .formulario-pacientes h2
@@ -127,7 +128,7 @@ main .formulario-pacientes form input[type="submit"]
 
 main .listado-pacientes
 {
-  width: 50%;
+  width: 60%;
 }
 
 main .listado-pacientes :is(h2, p) { text-align: center; }
@@ -151,3 +152,47 @@ main .listado-pacientes p span
   color: var(--morado-principal);
   font-weight: 700;
 }
+
+/* ---------- PACIENTE ---------- */
+
+main .listado-pacientes .card-paciente
+{
+  background-color: var(--blanco);
+  width: 90%;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px var(--gris-sombra);
+}
+
+main .listado-pacientes .card-paciente h3
+{
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+main .listado-pacientes .card-paciente h3 span
+{
+  text-transform: none;
+  font-weight: 600;
+}
+
+main .listado-pacientes .card-paciente .botones
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+main .listado-pacientes .card-paciente .botones :is(.editar, .eliminar)
+{
+  background: none;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--blanco);
+}
+
+main .listado-pacientes .card-paciente .botones .editar { background-color: var(--morado-principal); }
+main .listado-pacientes .card-paciente .botones .eliminar { background-color: var(--rojo); }
