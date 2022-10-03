@@ -1,11 +1,12 @@
-function Paciente() {
+function Paciente({paciente}) {
+  const {nombre, propietario, email, alta, sintomas} = paciente
   return (
     <div className="card-paciente">
-        <h3>Nombre: <span>Hook</span></h3>
-        <h3>Propietario: <span>Juan</span></h3> 
-        <h3>Email: <span>correo@correo.com</span></h3>
-        <h3>Alta: <span>2022-10-10</span></h3>
-        <h3>Síntomas: <span>Solo duerme</span></h3>
+        <h3>Nombre: <span>{nombre}</span></h3>
+        <h3>Propietario: <span>{propietario}</span></h3> 
+        <h3>Email: <span>{email}</span></h3>
+        <h3>Alta: <span>{alta}</span></h3>
+        <h3>Síntomas: <span>{sintomas}</span></h3>
 
         <div className="botones">
             <button className="editar">Editar</button>

@@ -1,6 +1,6 @@
 import Paciente from "./Paciente"
 
-function ListadoPacientes() {
+function ListadoPacientes({pacientes}) {
   return (
     <section className="listado-pacientes">
         <h2>No hay pacientes</h2>
@@ -8,7 +8,12 @@ function ListadoPacientes() {
             <span>aparecerán en este lugar</span>
         </p>
 
-        <Paciente/>
+        { pacientes.map( paciente => (
+            <Paciente
+              paciente={paciente}
+            />
+        ))}
+
     </section>
   )
 }
