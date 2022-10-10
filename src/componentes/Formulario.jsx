@@ -21,7 +21,7 @@ function Formulario({pacientes, setPacientes, paciente}) {
         }
     }, [paciente])
 
-    function generarId(params) {
+    function generarId() {
         const random = Math.random().toString(36).substr(2);
         const fecha = Date.now().toString(2);
 
@@ -112,7 +112,7 @@ function Formulario({pacientes, setPacientes, paciente}) {
             />
             <input
                 type="submit"
-                value="AGREGAR PACIENTE"
+                value= { paciente.id ? "EDITAR PACIENTE" : "AGREGAR PACIENTE" }
             />
         </form>
     </>
