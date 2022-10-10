@@ -1,4 +1,4 @@
-function Paciente({paciente}) {
+function Paciente({paciente, setPaciente}) {
   const {nombre, propietario, email, alta, sintomas} = paciente
   return (
     <div className="card-paciente">
@@ -9,7 +9,10 @@ function Paciente({paciente}) {
         <h3>Síntomas: <span>{sintomas}</span></h3>
 
         <div className="botones">
-            <button className="editar">Editar</button>
+            <button
+              className="editar"
+              onClick={() => setPaciente(paciente)}
+            >Editar</button>
             <button className="eliminar">Eliminar</button>
         </div>
     </div>

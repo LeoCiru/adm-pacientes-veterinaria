@@ -1,6 +1,6 @@
 import Paciente from "./Paciente"
 
-function ListadoPacientes({pacientes}) {
+function ListadoPacientes({pacientes, setPaciente}) {
   return (
     <>
       {
@@ -20,8 +20,9 @@ function ListadoPacientes({pacientes}) {
       
               { pacientes.map( paciente => (
                   <Paciente
-                  key={paciente.id}
+                    key={paciente.id}
                     paciente={paciente}
+                    setPaciente={setPaciente}
                   />
               ))}
           </section>

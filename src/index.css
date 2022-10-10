@@ -166,6 +166,7 @@ main .listado-pacientes .card-paciente
   border-radius: 10px;
   box-shadow: 5px 5px 8px var(--gris-sombra);
   margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
 main .listado-pacientes .card-paciente h3
