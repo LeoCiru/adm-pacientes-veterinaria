@@ -1,6 +1,8 @@
 import Paciente from "./Paciente"
 
 function ListadoPacientes({pacientes, setPaciente}) {
+
+
   return (
     <>
       {
