@@ -219,7 +219,7 @@ main .listado-pacientes .card-paciente .botones .eliminar { background-color: va
     height: auto;
   }
 
-  main .listado-pacientes .card-paciente { margin: auto; }
+  main .listado-pacientes .card-paciente { margin: 20px auto; }
 }
 
 /* ---------- ERROR ---------- */
