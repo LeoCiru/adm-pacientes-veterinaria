@@ -1,5 +1,13 @@
-function Paciente({paciente, setPaciente}) {
-  const {nombre, propietario, email, alta, sintomas} = paciente
+function Paciente({paciente, setPaciente, eliminarPaciente}) {
+  const {nombre, propietario, email, alta, sintomas, id} = paciente
+  function handleEliminar() {
+    const confirmacion = confirm(`¿Seguro que deseas eliminar la cita de ${nombre}?`);
+
+    if (confirmacion) {
+      eliminarPaciente(id)
+    }
+  }
+
   return (
     <div className="card-paciente">
         <h3>Nombre: <span>{nombre}</span></h3>
@@ -13,7 +21,10 @@ function Paciente({paciente, setPaciente}) {
               className="editar"
               onClick={() => setPaciente(paciente)}
             >Editar</button>
-            <button className="eliminar">Eliminar</button>
+            <button
+              className="eliminar"
+              onClick={handleEliminar}
+              >Eliminar</button>
         </div>
     </div>
   )
